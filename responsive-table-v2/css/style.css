@@ -1,0 +1,339 @@
+/* Table_Responsive_v2 - Colorlib
+ * Every style this snippet uses, and nothing else. No framework, no build step.
+ */
+
+/* Keeps a host page's framework base styles (Bootstrap's reboot) off this
+   snippet: every element starts from the browser default, then this sheet
+   styles it. On its own page it changes nothing. */
+:where(html) :is(html,body,div,span,p,a,h1,h2,h3,h4,h5,h6,label,input,select,option,optgroup,textarea,button,form,fieldset,legend,ul,ol,li,dl,dt,dd,figure,figcaption,section,article,header,footer,nav,main,aside,strong,b,em,i,small,sub,sup,blockquote,pre,code,picture,progress,output,summary,details,address,abbr,mark), :is(html, body) {
+  all: revert;
+}
+:where(html) input::-webkit-datetime-edit,
+:where(html) input::-webkit-datetime-edit-fields-wrapper,
+:where(html) input::-webkit-datetime-edit-text,
+:where(html) input::-webkit-datetime-edit-month-field,
+:where(html) input::-webkit-datetime-edit-day-field,
+:where(html) input::-webkit-datetime-edit-year-field {
+  all: revert;
+}
+:where(html) :is(img, svg) {
+  vertical-align: revert;
+}
+:where(html) :is(img, table, thead, tbody, tfoot, tr, th, td, caption, hr, iframe, video) {
+  box-sizing: revert;
+}
+:where(html) img {
+  border-style: revert;
+}
+:where(html) table {
+  border-collapse: revert;
+  caption-side: revert;
+}
+:where(html) caption {
+  padding-top: revert;
+  padding-bottom: revert;
+  color: revert;
+  text-align: revert;
+}
+:where(html) th {
+  text-align: revert;
+}
+:where(html) :is(thead, tbody, tfoot, tr, td, th) {
+  border-color: revert;
+  border-style: revert;
+  border-width: revert;
+}
+:where(html) hr {
+  margin: revert;
+  color: revert;
+  background-color: revert;
+  border: revert;
+  opacity: revert;
+  height: revert;
+  overflow: revert;
+}
+
+@media print {
+  :is(*, html) {
+    text-shadow: none !important;
+    box-shadow: none !important;
+  }
+}
+
+:is(*, html) {
+  box-sizing: inherit;
+}
+
+:is(*, html) {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+.cl-icon {
+  height: 1em;
+  width: auto;
+  fill: currentColor;
+  display: inline-block;
+}
+
+@media print {
+  ::after,
+  ::before {
+    text-shadow: none !important;
+    box-shadow: none !important;
+  }
+
+  .cl-table {
+    border-collapse: collapse !important;
+  }
+}
+
+html {
+  box-sizing: border-box;
+  font-family: sans-serif;
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -ms-overflow-style: scrollbar;
+  -webkit-tap-highlight-color: transparent;
+}
+
+::after,
+::before {
+  box-sizing: inherit;
+}
+
+@-ms-viewport {
+  width: device-width;
+}
+
+header {
+  display: block;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  background-color: #fff;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+::-webkit-file-upload-button {
+  font: inherit;
+  -webkit-appearance: button;
+}
+
+.cl-row {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+.cl-table {
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 1rem;
+  background-color: transparent;
+}
+
+.cl-table .cl-table {
+  background-color: #fff;
+}
+
+@font-face {
+  font-family: Poppins-Regular;
+
+  src: url('../fonts/Poppins-Regular.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: Poppins-Bold;
+
+  src: url('../fonts/Poppins-Bold.woff2') format('woff2');
+}
+
+body,
+html {
+  height: 100%;
+  font-family: sans-serif;
+}
+
+.limiter {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.container-table100 {
+  width: 100%;
+  min-height: 100vh;
+  background: #c4d3f6;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 33px 30px;
+}
+
+.wrap-table100 {
+  width: 960px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.cl-table {
+  width: 100%;
+  display: table;
+  margin: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .cl-table {
+    display: block;
+  }
+}
+
+.cl-row {
+  display: table-row;
+  background: #fff;
+}
+
+.cl-row.header {
+  color: #ffffff;
+  background: #6c7ae0;
+}
+
+@media screen and (max-width: 768px) {
+  .cl-row {
+    display: block;
+  }
+
+  .cl-row.header {
+    padding: 0;
+    height: 0px;
+  }
+
+  .cl-row.header .cell {
+    display: none;
+  }
+
+  .cl-row .cell:before {
+    font-family: Poppins-Bold;
+    font-size: 12px;
+    color: #808080;
+    line-height: 1.2;
+    text-transform: uppercase;
+    font-weight: unset !important;
+    margin-bottom: 13px;
+    content: attr(data-title);
+    min-width: 98px;
+    display: block;
+  }
+}
+
+.cell {
+  display: table-cell;
+}
+
+@media screen and (max-width: 768px) {
+  .cell {
+    display: block;
+  }
+}
+
+.cl-row .cell {
+  font-family: Poppins-Regular;
+  font-size: 15px;
+  color: #666666;
+  line-height: 1.2;
+  font-weight: unset !important;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #f2f2f2;
+}
+
+.cl-row.header .cell {
+  font-family: Poppins-Regular;
+  font-size: 18px;
+  color: #fff;
+  line-height: 1.2;
+  font-weight: unset !important;
+  padding-top: 19px;
+  padding-bottom: 19px;
+}
+
+.cl-row .cell:nth-child(1) {
+  width: 360px;
+  padding-left: 40px;
+}
+
+.cl-row .cell:nth-child(2) {
+  width: 160px;
+}
+
+.cl-row .cell:nth-child(3) {
+  width: 250px;
+}
+
+.cl-row .cell:nth-child(4) {
+  width: 190px;
+}
+
+.cl-table,
+.cl-row {
+  width: 100% !important;
+}
+
+.cl-row:hover {
+  background-color: #ececff;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .cl-row {
+    border-bottom: 1px solid #f2f2f2;
+    padding-bottom: 18px;
+    padding-top: 30px;
+    padding-right: 15px;
+    margin: 0;
+  }
+
+  .cl-row .cell {
+    border: none;
+    padding-left: 30px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+
+  .cl-row .cell:nth-child(1) {
+    padding-left: 30px;
+  }
+
+  .cl-row .cell {
+    font-family: Poppins-Regular;
+    font-size: 18px;
+    color: #555555;
+    line-height: 1.2;
+    font-weight: unset !important;
+  }
+
+  .cl-table,
+  .cl-row,
+  .cell {
+    width: 100% !important;
+  }
+}

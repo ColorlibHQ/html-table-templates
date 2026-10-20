@@ -1,0 +1,557 @@
+/* Table_Highlight_Vertical_Horizontal - Colorlib
+ * Every style this snippet uses, and nothing else. No framework, no build step.
+ */
+
+/* Keeps a host page's framework base styles (Bootstrap's reboot) off this
+   snippet: every element starts from the browser default, then this sheet
+   styles it. On its own page it changes nothing. */
+:where(html) :is(html,body,div,span,p,a,h1,h2,h3,h4,h5,h6,label,input,select,option,optgroup,textarea,button,form,fieldset,legend,ul,ol,li,dl,dt,dd,figure,figcaption,section,article,header,footer,nav,main,aside,strong,b,em,i,small,sub,sup,blockquote,pre,code,picture,progress,output,summary,details,address,abbr,mark), :is(html, body) {
+  all: revert;
+}
+:where(html) input::-webkit-datetime-edit,
+:where(html) input::-webkit-datetime-edit-fields-wrapper,
+:where(html) input::-webkit-datetime-edit-text,
+:where(html) input::-webkit-datetime-edit-month-field,
+:where(html) input::-webkit-datetime-edit-day-field,
+:where(html) input::-webkit-datetime-edit-year-field {
+  all: revert;
+}
+:where(html) :is(img, svg) {
+  vertical-align: revert;
+}
+:where(html) :is(img, table, thead, tbody, tfoot, tr, th, td, caption, hr, iframe, video) {
+  box-sizing: revert;
+}
+:where(html) img {
+  border-style: revert;
+}
+:where(html) table {
+  border-collapse: revert;
+  caption-side: revert;
+}
+:where(html) caption {
+  padding-top: revert;
+  padding-bottom: revert;
+  color: revert;
+  text-align: revert;
+}
+:where(html) th {
+  text-align: revert;
+}
+:where(html) :is(thead, tbody, tfoot, tr, td, th) {
+  border-color: revert;
+  border-style: revert;
+  border-width: revert;
+}
+:where(html) hr {
+  margin: revert;
+  color: revert;
+  background-color: revert;
+  border: revert;
+  opacity: revert;
+  height: revert;
+  overflow: revert;
+}
+
+@media print {
+  :is(*, html) {
+    text-shadow: none !important;
+    box-shadow: none !important;
+  }
+}
+
+:is(*, html) {
+  box-sizing: inherit;
+}
+
+:is(*, html) {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+.cl-icon {
+  height: 1em;
+  width: auto;
+  fill: currentColor;
+  display: inline-block;
+}
+
+@media print {
+  ::after,
+  ::before {
+    text-shadow: none !important;
+    box-shadow: none !important;
+  }
+
+  thead {
+    display: table-header-group;
+  }
+
+  tr {
+    page-break-inside: avoid;
+  }
+
+  .table {
+    border-collapse: collapse !important;
+  }
+
+  .table td,
+  .table th {
+    background-color: #fff !important;
+  }
+}
+
+html {
+  box-sizing: border-box;
+  font-family: sans-serif;
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -ms-overflow-style: scrollbar;
+  -webkit-tap-highlight-color: transparent;
+}
+
+::after,
+::before {
+  box-sizing: inherit;
+}
+
+@-ms-viewport {
+  width: device-width;
+}
+
+header {
+  display: block;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  background-color: #fff;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+th {
+  text-align: left;
+}
+
+::-webkit-file-upload-button {
+  font: inherit;
+  -webkit-appearance: button;
+}
+
+.mark,
+mark {
+  padding: .2em;
+  background-color: #fcf8e3;
+}
+
+.col {
+  position: relative;
+  width: 100%;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.col {
+  -ms-flex-preferred-size: 0;
+  flex-basis: 0;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  max-width: 100%;
+}
+
+.table {
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 1rem;
+  background-color: transparent;
+}
+
+.table td,
+.table th {
+  padding: .75rem;
+  vertical-align: top;
+  border-top: 1px solid #e9ecef;
+}
+
+.table thead th {
+  vertical-align: bottom;
+  border-bottom: 2px solid #e9ecef;
+}
+
+.table tbody+tbody {
+  border-top: 2px solid #e9ecef;
+}
+
+.table .table {
+  background-color: #fff;
+}
+
+.m-b-110 {
+  margin-bottom: 110px;
+}
+
+@font-face {
+  font-family: Montserrat-Regular;
+
+  src: url('../fonts/Montserrat-Regular.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: Montserrat-Medium;
+
+  src: url('../fonts/Montserrat-Medium.woff2') format('woff2');
+}
+
+body,
+html {
+  height: 100%;
+  font-family: sans-serif;
+}
+
+.limiter {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.container-table100 {
+  width: 100%;
+  min-height: 100vh;
+  background: #d1d1d1;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 33px 30px;
+}
+
+.wrap-table100 {
+  width: 1300px;
+}
+
+table {
+  width: 100%;
+  background-color: #fff;
+}
+
+th,
+td {
+  font-weight: unset;
+  padding-right: 10px;
+}
+
+.column100 {
+  width: 130px;
+  padding-left: 25px;
+}
+
+.column100.column1 {
+  width: 265px;
+  padding-left: 42px;
+}
+
+.row100.head th {
+  padding-top: 24px;
+  padding-bottom: 20px;
+}
+
+.row100 td {
+  padding-top: 18px;
+  padding-bottom: 14px;
+}
+
+.table100.ver1 td {
+  font-family: Montserrat-Regular;
+  font-size: 14px;
+  color: #808080;
+  line-height: 1.4;
+}
+
+.table100.ver1 th {
+  font-family: Montserrat-Medium;
+  font-size: 12px;
+  color: #fff;
+  line-height: 1.4;
+  text-transform: uppercase;
+  background-color: #36304a;
+}
+
+.table100.ver1 .row100:hover {
+  background-color: #f2f2f2;
+}
+
+.table100.ver1 .hov-column-ver1 {
+  background-color: #f2f2f2;
+}
+
+.table100.ver1 .hov-column-head-ver1 {
+  background-color: #484848 !important;
+}
+
+.table100.ver1 .row100 td:hover {
+  background-color: #6c7ae0;
+  color: #fff;
+}
+
+.table100.ver2 td {
+  font-family: Montserrat-Regular;
+  font-size: 14px;
+  color: #808080;
+  line-height: 1.4;
+}
+
+.table100.ver2 th {
+  font-family: Montserrat-Medium;
+  font-size: 12px;
+  color: #fff;
+  line-height: 1.4;
+  text-transform: uppercase;
+  background-color: #333333;
+}
+
+.table100.ver2 .row100:hover td {
+  background-color: #83d160;
+  color: #fff;
+}
+
+.table100.ver2 .hov-column-ver2 {
+  background-color: #83d160;
+  color: #fff;
+}
+
+.table100.ver2 .hov-column-head-ver2 {
+  background-color: #484848 !important;
+}
+
+.table100.ver2 .row100 td:hover {
+  background-color: #57b846;
+  color: #fff;
+}
+
+.table100.ver2 tbody tr:nth-child(even) {
+  background-color: #eaf8e6;
+}
+
+.table100.ver2 td {
+  font-family: Montserrat-Regular;
+  font-size: 14px;
+  color: #808080;
+  line-height: 1.4;
+}
+
+.table100.ver2 th {
+  font-family: Montserrat-Medium;
+  font-size: 12px;
+  color: #fff;
+  line-height: 1.4;
+  text-transform: uppercase;
+  background-color: #333333;
+}
+
+.table100.ver2 .row100:hover td {
+  background-color: #83d160;
+  color: #fff;
+}
+
+.table100.ver2 .hov-column-ver2 {
+  background-color: #83d160;
+  color: #fff;
+}
+
+.table100.ver2 .hov-column-head-ver2 {
+  background-color: #484848 !important;
+}
+
+.table100.ver2 .row100 td:hover {
+  background-color: #57b846;
+  color: #fff;
+}
+
+.table100.ver3 tbody tr {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.table100.ver3 td {
+  font-family: Montserrat-Regular;
+  font-size: 14px;
+  color: #808080;
+  line-height: 1.4;
+}
+
+.table100.ver3 th {
+  font-family: Montserrat-Medium;
+  font-size: 12px;
+  color: #fff;
+  line-height: 1.4;
+  text-transform: uppercase;
+  background-color: #6c7ae0;
+}
+
+.table100.ver3 .row100:hover td {
+  background-color: #fcebf5;
+}
+
+.table100.ver3 .hov-column-ver3 {
+  background-color: #fcebf5;
+}
+
+.table100.ver3 .hov-column-head-ver3 {
+  background-color: #7b88e3 !important;
+}
+
+.table100.ver3 .row100 td:hover {
+  background-color: #e03e9c;
+  color: #fff;
+}
+
+.table100.ver4 td {
+  font-family: Montserrat-Regular;
+  font-size: 14px;
+  color: #808080;
+  line-height: 1.4;
+}
+
+.table100.ver4 th {
+  font-family: Montserrat-Medium;
+  font-size: 12px;
+  color: #fff;
+  line-height: 1.4;
+  text-transform: uppercase;
+  background-color: #fa4251;
+}
+
+.table100.ver4 .row100:hover td {
+  color: #fa4251;
+}
+
+.table100.ver4 .hov-column-ver4 {
+  background-color: #ffebed;
+}
+
+.table100.ver4 .hov-column-head-ver4 {
+  background-color: #f95462 !important;
+}
+
+.table100.ver4 .row100 td:hover {
+  background-color: #ffebed;
+  color: #fa4251;
+}
+
+.table100.ver5 tbody tr:nth-child(even) {
+  background-color: #e9faff;
+}
+
+.table100.ver5 td {
+  font-family: Montserrat-Regular;
+  font-size: 14px;
+  color: #808080;
+  line-height: 1.4;
+  position: relative;
+}
+
+.table100.ver5 th {
+  font-family: Montserrat-Medium;
+  font-size: 12px;
+  color: #fff;
+  line-height: 1.4;
+  text-transform: uppercase;
+  background-color: #002933;
+}
+
+.table100.ver5 .row100:hover td {
+  color: #fe3e64;
+}
+
+.table100.ver5 .hov-column-ver5 {
+  color: #fe3e64;
+}
+
+.table100.ver5 .hov-column-ver5::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  border-left: 1px solid #f2f2f2;
+  border-right: 1px solid #f2f2f2;
+}
+
+.table100.ver5 .hov-column-head-ver5 {
+  background-color: #1a3f48 !important;
+  color: #fe3e64;
+}
+
+.table100.ver5 .row100 td:hover {
+  color: #fe3e64;
+}
+
+.table100.ver5 .row100 td:hover:before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  border: 1px solid #fe3e64;
+}
+
+.table100.ver6 {
+  border-radius: 16px;
+  overflow: hidden;
+  background: #7918f2;
+  background: -webkit-linear-gradient(-68deg, #ac32e4 , #4801ff);
+  background: -o-linear-gradient(-68deg, #ac32e4 , #4801ff);
+  background: -moz-linear-gradient(-68deg, #ac32e4 , #4801ff);
+  background: linear-gradient(-68deg, #ac32e4 , #4801ff);
+}
+
+.table100.ver6 table {
+  background-color: transparent;
+}
+
+.table100.ver6 td {
+  font-family: Montserrat-Regular;
+  font-size: 14px;
+  color: #fff;
+  line-height: 1.4;
+}
+
+.table100.ver6 th {
+  font-family: Montserrat-Medium;
+  font-size: 12px;
+  color: #fff;
+  line-height: 1.4;
+  text-transform: uppercase;
+  background-color: rgba(255,255,255,0.32);
+}
+
+.table100.ver6 .row100:hover td {
+  background-color: rgba(255,255,255,0.1);
+}
+
+.table100.ver6 .hov-column-ver6 {
+  background-color: rgba(255,255,255,0.1);
+}
+
+.table100.ver6 .row100 td:hover {
+  background-color: rgba(255,255,255,0.2);
+}
